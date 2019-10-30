@@ -1538,27 +1538,27 @@ input, select, textarea {
 }
 
 #faqbar li:first-child {
-	background-color: #ffffff20;
-}
-
-#faqbar li:nth-child(2) {
-	background-color: #ffffff10;
-}
-
-#faqbar li:nth-child(3) {
-	background-color: #ffffff05;
-}
-
-#faqbar li:nth-child(4) {
-	background-color: #00000005;
-}
-
-#faqbar li:nth-child(5) {
 	background-color: #00000010;
 }
 
+#faqbar li:nth-child(2) {
+	background-color: #00000014;
+}
+
+#faqbar li:nth-child(3) {
+	background-color: #00000018;
+}
+
+#faqbar li:nth-child(4) {
+	background-color: #00000022;
+}
+
+#faqbar li:nth-child(5) {
+	background-color: #00000026;
+}
+
 #faqbar li:nth-child(6) {
-	background-color: #00000020;
+	background-color: #00000030;
 }
 
 /* Icons */
@@ -3499,6 +3499,7 @@ input, select, textarea {
 						letter-spacing: 0.225em;
 						padding: 0 1.5em;
 						text-transform: uppercase;
+						text-decoration: none;
 					}
 
 						#super nav > ul > li > a.menuToggle {
