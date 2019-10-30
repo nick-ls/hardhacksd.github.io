@@ -162,14 +162,15 @@ input, select, textarea {
 		-webkit-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
 		-ms-transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
 		transition: border-color 0.35s ease-in-out, color 0.35s ease-in-out;
-		color: #1100ff;
+		color: inherit;
 		text-shadow: 0 0 0.5px rgba(53, 184, 143, 0.25);
-		text-decoration: none;
+		text-decoration: underline;
 		border-bottom: dotted 1px rgba(53, 184, 143, 0.5);
 	}
 
 		a:hover {
 			border-bottom-color: rgba(53, 184, 143, 0);
+			color: #495bc2
 		}
 
 	sub {
@@ -1775,6 +1776,7 @@ input, select, textarea {
 		-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 		transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
 		-webkit-appearance: none;
+		margin: auto;
 		position: relative;
 		display: inline-block;
 		border: 0;
@@ -1803,7 +1805,7 @@ input, select, textarea {
 		input[type="reset"].style2,
 		button.style2,
 		.button.style2 {
-			color: #3a3939;
+			color: #283b3f;
 			background: #fff;
 			box-shadow: inset 0 0 0 1px #fff;
 		}
@@ -3458,6 +3460,7 @@ input, select, textarea {
 				display: block;
 				height: inherit;
 				line-height: inherit;
+				color: #fff;
 			}
 
 				@media screen and (max-width: 736px) {
