@@ -2310,6 +2310,7 @@ input, select, textarea {
 .companyLogos{
 	width: 150px;
 	height: 43px;
+	margin: 8px;
 }
 	@media screen and (max-width: 1680px) {
 
