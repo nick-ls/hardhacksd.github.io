@@ -2309,8 +2309,28 @@ input, select, textarea {
 /* Wide */
 .companyLogos{
 	width: 150px;
-	height: 43px;
+    height: 43px;
 	margin: 8px;
+}
+.diamondSponsor {
+    width: 100%;
+    height: 100%;
+}
+.goldSponsor {
+    width: 75%;
+    height: 75%;
+}
+.silverSponsor {
+    width: 50%;
+    height: 50%;
+}
+.foodSponsor {
+    width: 25%;
+    height: 25%;
+}
+.hostSponsor {
+    width: 25%;
+    height: 25%;
 }
 	@media screen and (max-width: 1680px) {
 
