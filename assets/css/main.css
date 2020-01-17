@@ -2317,16 +2317,16 @@ input, select, textarea {
     height: 100%;
 }
 .goldSponsor {
-    width: 75%;
-    height: 75%;
+    width: 70%;
+    height: 70%;
 }
 .silverSponsor {
     width: 50%;
     height: 50%;
 }
 .foodSponsor {
-    width: 25%;
-    height: 25%;
+    width: 20%;
+    height: 20%;
 }
 .hostSponsor {
     width: 25%;
