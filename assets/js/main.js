@@ -140,7 +140,7 @@
 /**
  * The code for the countdown follows
  */
-var deadline = 'January 17 2020 6:00 PM PST';
+var deadline = 'January 18 2020 7:00 PM PST';
 
 function getTimeRemaining(endtime){
 	var t = Date.parse(endtime) - Date.parse(new Date());
