@@ -26,7 +26,7 @@ export default class Trivia extends Component<TriviaProps, TriviaState> {
 		return <div className="trivia-section">
 			<div className="trivia-reveal" onClick={this.reveal.bind(this)}>
 				<div className="trivia-question">{this.props.question}</div>
-				<div className="trivia-arrow">
+				<div className={"trivia-arrow" + (this.state.answered ? " answered" : "")}>
 					<img src="img/arrow.svg"></img>
 				</div>
 			</div>

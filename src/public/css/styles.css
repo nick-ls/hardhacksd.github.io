@@ -163,6 +163,48 @@ button:hover {
 	background-color: var(--pink);
 }
 
+/* Trivia styles */
+.trivia-section {
+	width: 40em;
+	padding: 2em;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.trivia-reveal {
+	width: 25em;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+.trivia-arrow {
+	transition: transform 0.15s;
+	transform: rotate(-90deg);
+}
+.answered {
+	transform: rotate(0deg);
+}
+.trivia-answer {
+	font-size: 0.8em;
+    margin-top: 3em;
+	text-align: center;
+	position: relative;
+}
+.trivia-answer::before, .trivia-answer::after {
+	content: "";
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	left: 0;
+	background-color: white;
+}
+.trivia-answer::before {
+	top: -1.5em;
+}
+.trivia-answer::after {
+	bottom: -1.5em;
+}
+
 /* Responsive queries go here */
 @media screen and (max-width: 760px) {
 	
