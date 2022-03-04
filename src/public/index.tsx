@@ -19,7 +19,10 @@ class Main extends React.Component<MainProps, MainState> {
 			<img className="logo" src="img/hardhack.png"></img>
 			<TopBar links={LINKS}></TopBar>
 			<Splash></Splash>
-			<HorizontalSection title="About" id="about"></HorizontalSection>
+			<HorizontalSection title="About" id="about">
+				<p>H.A.R.D. Hack is a hardware hackathon that HKN holds annually in collaboration with IEEE. We provide the materials and the tools needed to make a hardware hack. Come out and build something cool! Anyone can attend, regardless of skill level, major, or university.</p>
+				<button className="sub-button">View Past Submissions</button>
+			</HorizontalSection>
 			<HorizontalSection title="FAQ" id="faq"></HorizontalSection>
 			<HorizontalSection title="Sponsors" id="sponsors"></HorizontalSection>
 		</>;
