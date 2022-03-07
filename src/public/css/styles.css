@@ -109,6 +109,15 @@ button:hover {
 	display: flex;
 	justify-content: center;
 }
+.sponsor-image {
+	margin: 2em;
+}
+#sponsors {
+	margin-top: 6em;
+}
+#sponsors > :first-child {
+	margin-bottom: 1em;
+}
 
 /* Horizontal section styles */
 .section-title {

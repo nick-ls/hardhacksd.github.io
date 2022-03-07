@@ -48,7 +48,11 @@ class Main extends React.Component<MainProps, MainState> {
 					<Trivia question={n.question} answer={n.answer} key={n.question}></Trivia>
 				)
 			}</HorizontalSection>
-			<HorizontalSection title="Sponsors" id="sponsors"></HorizontalSection>
+			<HorizontalSection title="Sponsors" id="sponsors">
+				<img className="sponsor-image" alt="UCSD Sponsor" src="img/ucsd.png"></img>
+				<img className="sponsor-image" alt="Texas Instruments Sponsor" src="img/ti.png"></img>
+				<img className="sponsor-image" alt="Northrop Grumman Sponsor" src="img/northrop.png"></img>
+			</HorizontalSection>
 		</>;
 	}
 }
