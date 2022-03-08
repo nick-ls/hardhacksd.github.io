@@ -1,12 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy Site
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ development ]
   pull_request:
     branches: [ master ]
 
@@ -33,4 +31,11 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           npm i
           rm .gitignore
-          npm run build-git & git stash & git checkout -b page & git stash pop & git add . & git commit -m "Generated React site" & git push
+          webpack
+          tsc
+          git stash
+          git checkout -b page
+          git stash pop
+          git add .
+          git commit -m "Generated React site"
+          git push
