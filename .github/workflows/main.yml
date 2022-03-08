@@ -29,14 +29,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Deploy GH Pages Site
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           npm i
-          npm run build-git
           rm .gitignore
-          git stash
-          git checkout -b page
-          git stash pop
-          git add .
-          git commit -m "Generated React site"
-          git push
+          npm run build-git & git stash & git checkout -b page & git stash pop & git add . & git commit -m "Generated React site" & git push
