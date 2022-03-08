@@ -4,27 +4,9 @@ import TopBar from "./modules/TopBar";
 import HorizontalSection from "./modules/HorizontalSection";
 import Splash from "./modules/Splash";
 import Trivia from "./modules/Trivia";
+import {FAQ, SOCIALS, PAST_SUBMISSIONS} from "./Config";
 
 const LINKS = ["About", "FAQ", "Sponsors"];
-const FAQ = [{
-	question: "What is a hackathon?",
-	answer: "A hackathon is a gathering where people collaboratively build a project from the ground-up over a short period of time. While working on a particular project, the idea is for each group member to have the ability and freedom to work on whatever they want."
-},{
-	question: "Is it free?",
-	answer: "no"
-},{
-	question: "What do I bring?",
-	answer: "your clothes"
-},{
-	question: "Do I need a team?",
-	answer: "if you want to win"
-},{
-	question: "Where is it?",
-	answer: "your mom's house"
-},{
-	question: "When is it?",
-	answer: "now"
-}];
 
 interface MainProps {}
 interface MainState {}
@@ -36,12 +18,12 @@ class Main extends React.Component<MainProps, MainState> {
 	}
 	public render() {
 		return <>
-			<img className="logo" src="img/hardhack.png"></img>
+			<a href="/"><img className="logo" src="img/hardhack.png" alt="HARD Hack Logo"></img></a>
 			<TopBar links={LINKS}></TopBar>
 			<Splash></Splash>
 			<HorizontalSection title="About" id="about">
 				<p>H.A.R.D. Hack is a hardware hackathon that HKN holds annually in collaboration with IEEE. We provide the materials and the tools needed to make a hardware hack. Come out and build something cool! Anyone can attend, regardless of skill level, major, or university.</p>
-				<button className="sub-button">View Past Submissions</button>
+				<a href={PAST_SUBMISSIONS}><button className="sub-button">View Past Submissions</button></a>
 			</HorizontalSection>
 			<HorizontalSection title="FAQ" id="faq">{
 				FAQ.map(n=>
@@ -51,8 +33,19 @@ class Main extends React.Component<MainProps, MainState> {
 			<HorizontalSection title="Sponsors" id="sponsors">
 				<img className="sponsor-image" alt="UCSD Sponsor" src="img/ucsd.png"></img>
 				<img className="sponsor-image" alt="Texas Instruments Sponsor" src="img/ti.png"></img>
-				<img className="sponsor-image" alt="Northrop Grumman Sponsor" src="img/northrop.png"></img>
+				<img className="sponsor-image" alt="Northrop Grumman Sponsor" src="img/northrop.svg"></img>
 			</HorizontalSection>
+			<div className="footer">
+				<a href="/"><img src="img/hardhack.png" alt="HARD Hack Logo"></img></a>
+				<div className="scls">{
+					SOCIALS.map(s=>
+						<a href={s.link}>
+							<img src={s.img} alt={s.link}></img>
+						</a>
+					)
+				}
+				</div>
+			</div>
 		</>;
 	}
 }
