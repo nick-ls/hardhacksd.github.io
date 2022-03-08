@@ -38,4 +38,4 @@ jobs:
           git stash pop
           git add .
           git commit -m "Generated React site"
-          git push --set-upstream origin page
+          git push --set-upstream origin page --force
