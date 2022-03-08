@@ -111,6 +111,7 @@ button:hover {
 }
 .sponsor-image {
 	margin: 2em;
+	width: 22em;
 }
 #sponsors {
 	margin-top: 6em;
@@ -186,11 +187,11 @@ button:hover {
 	justify-content: space-between;
 	cursor: pointer;
 }
-.trivia-arrow {
+.trivia-arrow img {
 	transition: transform 0.15s;
 	transform: rotate(-90deg);
 }
-.answered {
+.answered img {
 	transform: rotate(0deg);
 }
 .trivia-answer {
@@ -198,6 +199,8 @@ button:hover {
     margin-top: 3em;
 	text-align: center;
 	position: relative;
+	min-width: 100%;
+	margin-bottom: 2em;
 }
 .trivia-answer::before, .trivia-answer::after {
 	content: "";
@@ -213,11 +216,92 @@ button:hover {
 .trivia-answer::after {
 	bottom: -1.5em;
 }
-
-/* Responsive queries go here */
-@media screen and (max-width: 760px) {
-	
+.trivia-answer a {
+	text-decoration: underline;
 }
-@media screen and (max-width: 430px) {
-	
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 8em;
+	padding-bottom: 6em;
+}
+.scls {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.scls img {
+	width: 4em;	
+}
+.scls a {
+	margin-top: 4em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+/* Responsive queries go here */
+@media screen and (max-width: 1160px) {
+	div.splash-container {
+		padding: 1em;
+		background-color: rgba(0,0,0,0.5);
+		left: unset;
+		right: 0;
+	}
+	div.trivia-section {
+		width: 30em;
+	}
+}
+@media screen and (max-width: 810px) {
+	div.trivia-section {
+		width: 20em;
+	}
+	div.e-right, div.e-left {
+		width: 0.5em;
+	}
+}
+@media screen and (max-width: 750px) {
+	div.splash-container {
+		width: calc(100% - 2em);
+	}
+	div.e-right, div.e-left {
+		width: 0.5em;
+	}
+	div.trivia-reveal {
+		width: 20em;
+	}
+	div.top-bar {
+		visibility: hidden;
+	}
+}
+@media screen and (max-width: 605px) {
+	div.splash > img {
+		width: 15em;
+	}
+	/*div.e-right, div.e-left {
+		display: none;
+	}*/
+	div.title {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	img.sponsor-image {
+		width: 14em;
+	}
+	div.trivia-section {
+		width: 15em;
+	}
+	div.splash-title {
+		font-size: 2.5em;
+	}
+	div.scls img {
+		width: 2.5em;
+	}
+}
+@media screen and (max-width: 500px) {
+	#root {
+		font-size: 0.65em;
+	}
 }
