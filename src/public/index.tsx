@@ -32,8 +32,6 @@ class Main extends React.Component<MainProps, MainState> {
 			}</HorizontalSection>
 			<HorizontalSection title="Sponsors" id="sponsors">
 				<img className="sponsor-image" alt="UCSD Sponsor" src="img/ucsd.png"></img>
-				<img className="sponsor-image" alt="Texas Instruments Sponsor" src="img/ti.png"></img>
-				<img className="sponsor-image" alt="Northrop Grumman Sponsor" src="img/northrop.svg"></img>
 			</HorizontalSection>
 			<div className="footer">
 				<a href="/"><img src="img/hardhack.png" alt="HARD Hack Logo"></img></a>
