@@ -34,7 +34,8 @@ jobs:
           rm .gitignore
           webpack
           tsc
-          mv build docs
+          rm build/index.js
+          mv build/public docs
           git stash
           git checkout -b page
           git stash pop
