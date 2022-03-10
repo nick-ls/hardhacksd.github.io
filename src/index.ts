@@ -16,7 +16,7 @@ interface Website {
 const app = express();
 const template = fs.readFileSync(path.join(__dirname, "public/template.html")).toString();
 const websites = [{
-	sitename: "hardhack",
+	sitename: "index",
 	title: "H.A.R.D. Hack 2022",
 	description: "",
 	jsfile: "js/index.js",
@@ -40,8 +40,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // Send main page
-app.get("/", (req: Request, res: Response) => {
-	respond(res, "hardhack");
+app.get("/", (req: Request, res: Response)=>{
+	respond(res, "index");
 });
 
 /**
@@ -63,4 +63,15 @@ function generatePage(name: string): string {
 	return html;
 }
 
-app.listen(PORT, "127.0.0.1");
+function generateFilePages() {
+	for (let site of websites) {
+		let html = generatePage(site.sitename);
+		fs.writeFileSync(require("path").join(__dirname, "public/", `${site.sitename}.html`), html);
+	}
+}
+
+if (process.argv[2] === "generate") {
+	generateFilePages();
+} else {
+	app.listen(PORT, "127.0.0.1");
+}
