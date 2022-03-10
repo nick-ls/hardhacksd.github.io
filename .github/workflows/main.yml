@@ -36,7 +36,7 @@ jobs:
           tsc
           node build/index.js generate
           rm build/index.js
-          rm build/template.html
+          rm build/public/template.html
           mv build/public docs
           git stash
           git checkout -b page
