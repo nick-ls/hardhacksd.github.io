@@ -38,6 +38,7 @@ jobs:
           rm build/index.js
           rm build/public/template.html
           mv build/public docs
+          echo "# DO NOT MANUALLY PUSH TO THIS BRANCH, ANY WORK DONE WILL BE ERASED. ITS WORK COMES FROM MASTER AND IT WILL BE REWRITTEN THE NEXT TIME AN ACTION OCCURS ON THE MASTER BRANCH" > README.md
           git stash
           git checkout -b page
           git stash pop
