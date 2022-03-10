@@ -38,5 +38,5 @@ export const SOCIALS = [{
 	link: "https://linkedin.com"
 }];
 
-export const PAST_SUBMISSIONS = "https://example.com";
+export const PAST_SUBMISSIONS = "https://h-a-r-d-hack-2020.devpost.com/";
 export const APPLY_URL = "https://example.com";
