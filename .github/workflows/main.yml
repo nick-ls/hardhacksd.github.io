@@ -34,7 +34,9 @@ jobs:
           rm .gitignore
           webpack
           tsc
+          node build/index.js generate
           rm build/index.js
+          rm build/template.html
           mv build/public docs
           git stash
           git checkout -b page
