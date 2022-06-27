@@ -1,0 +1,307 @@
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+	display: none;
+}
+::-webkit-scrollbar-thumb {
+	background: #ececec;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #e2e2e2;
+}
+::-webkit-scrollbar-thumb:active {
+	background: #b8b8b8;
+}
+::-webkit-scrollbar-track {
+	background: #383838;
+}
+
+/* Color vars should go here */
+:root {
+	--blue: #A1D2E8;
+	--pink: #FF65E0;
+	--purple: #923BE6;
+	--turquoise: #54A2C4;
+	--stroke-width: 3px;
+	--stroke-radius: 10px;
+}
+
+html,body {
+	margin: 0;
+	color: white;
+	font-size: 1.2em;
+}
+#root {
+	min-height: 100vh;
+	width: 100%;
+	font-family: "Lexend Peta";
+	background: linear-gradient(-7deg, var(--purple), var(--turquoise));
+	scroll-behavior: smooth;
+}
+.logo {
+	position: absolute;
+	top: 1em;
+	left: 2em;
+	max-width: 9em;
+}
+.top-bar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.top-bar a {
+    margin: 1em;
+	font-size: 1.1em;
+}
+a {
+	font-weight: 700;
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	color: var(--pink);
+}
+
+button {
+	background-color: var(--pink);
+	border: none;
+	border-radius: 10000px;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 3px;
+	padding: 0.6em 1.2em;
+}
+button:hover {
+	background-color: var(--blue);
+}
+
+
+/* Splash screen styles */
+.splash {
+	width: 100%;
+	margin-top: 4em;
+	position: relative;
+	margin-bottom: 4em;
+}
+.splash-container {
+	position: absolute;
+	top: 10%;
+	left: 40%;
+	width: 30em;
+}
+.splash-title {
+	font-size: 3em;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+}
+.splash-description {
+	font-size: 1.3em;
+	margin-bottom: 2em;
+}
+.splash-apply {
+	font-size: 1.6em;
+}
+.horiz-center {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.sponsor-image {
+	margin: 2em;
+	width: 22em;
+}
+#sponsors {
+	margin-top: 6em;
+}
+#sponsors > :first-child {
+	margin-bottom: 1em;
+}
+
+/* Horizontal section styles */
+.section-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5em;
+}
+.title {
+	padding: 0.2em 0.75em;
+}
+.e-left, .e-right {
+	height: var(--stroke-width);
+	width: 2.5em;
+	background-color: white;
+	position: relative;
+}
+.e-left::before, .e-right::after {
+	content: "";
+	height: calc(2 * var(--stroke-radius));
+	width: calc(2 * var(--stroke-radius));
+	position: absolute;
+	border: solid var(--stroke-width) white;
+	border-radius: calc(var(--stroke-width) * 100);
+	top: calc(50% - calc(var(--stroke-radius) + var(--stroke-width)));
+}
+.e-left::before {
+	left: calc(calc(var(--stroke-width) * -2) + calc(var(--stroke-radius) * -2) + 1px);
+}
+.e-right::after {
+	right: calc(calc(var(--stroke-width) * -2) + calc(var(--stroke-radius) * -2) + 1px);
+}
+.horizontal-section p {
+	max-width: 30em;
+	text-align: center;
+	padding: 1em 2em 2em 2em;
+}
+.horizontal-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.sub-button {
+	font-size: 1.3em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	background-color: var(--blue);
+	margin-bottom: 5em;
+}
+.sub-button:hover {
+	background-color: var(--pink);
+}
+
+/* Trivia styles */
+.trivia-section {
+	width: 40em;
+	padding: 2em;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.trivia-reveal {
+	width: 25em;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+.trivia-arrow img {
+	transition: transform 0.15s;
+	transform: rotate(-90deg);
+}
+.answered img {
+	transform: rotate(0deg);
+}
+.trivia-answer {
+	font-size: 0.8em;
+    margin-top: 3em;
+	text-align: center;
+	position: relative;
+	min-width: 100%;
+	margin-bottom: 2em;
+}
+.trivia-answer::before, .trivia-answer::after {
+	content: "";
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	left: 0;
+	background-color: white;
+}
+.trivia-answer::before {
+	top: -1.5em;
+}
+.trivia-answer::after {
+	bottom: -1.5em;
+}
+.trivia-answer a {
+	text-decoration: underline;
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 8em;
+	padding-bottom: 6em;
+}
+.scls {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.scls img {
+	width: 2.2em;	
+}
+.scls a {
+	margin-top: 2em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+/* Responsive queries go here */
+@media screen and (max-width: 1160px) {
+	div.splash-container {
+		padding: 1em;
+		background-color: rgba(0,0,0,0.5);
+		left: unset;
+		right: 0;
+	}
+	div.trivia-section {
+		width: 30em;
+	}
+}
+@media screen and (max-width: 810px) {
+	div.trivia-section {
+		width: 20em;
+	}
+	div.e-right, div.e-left {
+		width: 0.5em;
+	}
+}
+@media screen and (max-width: 750px) {
+	div.splash-container {
+		width: calc(100% - 2em);
+	}
+	div.e-right, div.e-left {
+		width: 0.5em;
+	}
+	div.trivia-reveal {
+		width: 20em;
+	}
+	div.top-bar {
+		visibility: hidden;
+	}
+}
+@media screen and (max-width: 605px) {
+	div.splash > img {
+		width: 15em;
+	}
+	/*div.e-right, div.e-left {
+		display: none;
+	}*/
+	div.title {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	img.sponsor-image {
+		width: 14em;
+	}
+	div.trivia-section {
+		width: 15em;
+	}
+	div.splash-title {
+		font-size: 2.5em;
+	}
+	div.scls img {
+		width: 2.5em;
+	}
+}
+@media screen and (max-width: 500px) {
+	#root {
+		font-size: 0.65em;
+	}
+}
