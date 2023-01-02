@@ -37,7 +37,7 @@
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^5.2.7",
-    "html-webpack-plugin": "^4.5.2",
+    "html-webpack-plugin": "^5.5.0",
     "license-webpack-plugin": "^2.3.21",
     "npm-watch": "^0.7.0",
     "style-loader": "^2.0.0",
